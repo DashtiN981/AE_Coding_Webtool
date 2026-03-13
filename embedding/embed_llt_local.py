@@ -4,7 +4,7 @@ import json
 from tqdm import tqdm
 
 # Load LLT terms from CSV
-llt_df = pd.read_excel("./data/Excel files/LLT2_Code_Deutsch_25_0.xlsx")
+llt_df = pd.read_excel("./data/LLT2_Code_Deutsch_25_0.xlsx")
 terms = llt_df["LLT_Term"].astype(str).tolist()
 
 # Load sentence transformer model (offline if already cached)
@@ -22,7 +22,7 @@ for term in tqdm(terms, desc="Embedding Deutsch LLT terms"):
         print(f"Error embedding term '{term}': {e}")
 
 # Save all embeddings to JSON file
-with open("./embedding/llt2_deutsch_embeddings.json", "w", encoding="utf-8") as f:
+with open("./embedding/llt2_embeddings.json", "w", encoding="utf-8") as f:
     json.dump(embeddings, f, ensure_ascii=False, indent=2)
 
-print("Done! All embeddings saved to llt2_deutsch_embeddings.json")
+print("Done! All embeddings saved to llt2_embeddings.json")
