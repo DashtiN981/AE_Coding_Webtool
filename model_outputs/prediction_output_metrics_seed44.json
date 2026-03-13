@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "dataset": "AE_mock_dataset",
+    "model": "GPT-OSS-120B",
+    "top_k": 100,
+    "max_rows": 10,
+    "embedding_dim": 384,
+    "llm_temp": 0.0,
+    "llm_token": 250,
+    "timestamp": "2026-03-13T12:43:16",
+    "notes": "per-AE results saved in OUTPUT_FILE_NAME.json; aggregated metrics saved here"
+  },
+  "counts": {
+    "n_samples": 10,
+    "n_LLT_code_eval": 6,
+    "n_PT_code_eval": 6,
+    "n_SOC_optA": 6,
+    "n_SOC_optB": 6,
+    "n_SOC_any": 6
+  },
+  "metrics": {
+    "LLT_term_acc_exact": 0.5,
+    "LLT_term_acc_fuzzy": 0.5,
+    "LLT_precision_macro": 0.36363636363636365,
+    "LLT_recall_macro": 0.3181818181818182,
+    "LLT_f1_macro": 0.3333333333333333,
+    "PT_term_acc_exact": 0.6,
+    "PT_term_acc_fuzzy": 0.5,
+    "PT_precision_macro": 0.4722222222222222,
+    "PT_recall_macro": 0.5,
+    "PT_f1_macro": 0.45185185185185184,
+    "LLT_code_acc": 0.8333333333333334,
+    "PT_code_acc": 0.8333333333333334,
+    "SOC_acc_option_a": 0.6666666666666666,
+    "SOC_acc_option_b": 0.8333333333333334,
+    "SOC_acc_any_of_vs_AE": 0.8333333333333334
+  }
+}
