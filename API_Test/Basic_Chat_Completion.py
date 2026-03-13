@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-client = OpenAI(api_key="API-Key-Here", base_url="Bas")
+client = OpenAI(api_key="API-Key-Here", base_url="Base-URL-Here")
 
 response = client.chat.completions.create(
     messages=[

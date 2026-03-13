@@ -25,4 +25,4 @@ for term in tqdm(terms, desc="Embedding English LLT terms"):
 with open("./embedding/llt2_embeddings.json", "w", encoding="utf-8") as f:
     json.dump(embeddings, f, ensure_ascii=False, indent=2)
 
-print("Done! All embeddings saved to llt2_embeddings.json")
+print("Done! All embeddings saved to ./embedding/llt2_embeddings.json")
