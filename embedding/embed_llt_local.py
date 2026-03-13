@@ -4,7 +4,7 @@ import json
 from tqdm import tqdm
 
 # Load LLT terms from CSV
-llt_df = pd.read_excel("./data/LLT2_Code_Deutsch_25_0.xlsx")
+llt_df = pd.read_excel("./data/LLT2_Code_English_25_0.xlsx")
 terms = llt_df["LLT_Term"].astype(str).tolist()
 
 # Load sentence transformer model (offline if already cached)
@@ -14,7 +14,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")  # or another local model
 embeddings = {}
 
 # Loop through each term and generate embedding
-for term in tqdm(terms, desc="Embedding Deutsch LLT terms"):
+for term in tqdm(terms, desc="Embedding English LLT terms"):
     try:
         emb = model.encode(term).tolist()  # convert numpy array to list
         embeddings[term] = emb
